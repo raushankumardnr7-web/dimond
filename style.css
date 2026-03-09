@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgb(255, 246, 246);
+
+}
+
+.logo {
+    width: 10%;
+}
+
+.logo img {
+    width: 85%;
+}
+
+.menu-list {
+    width: 81%;
+}
+
+.menu-list ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+}
+
+.hero-slider {
+    margin-top: 108px;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: heroSlide 10s infinite;
+}
+
+.hero-slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+}
+
+@keyframes heroSlide {
+
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+
+    25%,
+    40% {
+        transform: translateX(-100%);
+    }
+
+    45%,
+    60% {
+        transform: translateX(-200%);
+    }
+
+    65%,
+    80% {
+        transform: translateX(-300%);
+    }
+
+    85%,
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+.hero-btn {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.multi-use-left-btn,
+.multi-use-right-btn {
+    background: rgb(255, 255, 255, .1);
+    border: 2px solid rgb(213, 218, 224, 0.8);
+    padding: 14px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+        0 0 30px rgba(255, 255, 255, 0.7),
+        0 0 45px rgba(255, 255, 255, 0.5);
+}
+
+.stone-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.heading {
+    color: #212529;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.heading h2 {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-family: 'Cormorant Infant';
+}
+
+.stone-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+}
+
+.stone-img span {
+    text-align: center;
+}
+
+.stone-img span p {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.stone-buy {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    align-items: center;
+    background: #d6d6d8;
+    margin-top: 50px;
+    padding: 50px 20px;
+}
+
+.stone-buy span img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.stone-buy-img {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stone-buy-img button {
+    outline: none;
+    padding: 12px 0;
+    border: 2px solid #6c757d;
+    width: 75%;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 200;
+    margin-top: 30px;
+}
+
+.stone-buy-text {
+    text-align: center;
+    letter-spacing: 3px;
+    line-height: 40px;
+
+}
+
+.stone-buy-text h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+
+/* birthstone section */
+.birthstone-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.slidder2 {
+    display: flex;
+    gap: 20px;
+    animation: birthstoneSlide 15s linear infinite;
+}
+
+.slidder2 img {
+    width: 220px;
+    height: 250px;
+    flex-shrink: 0;
+}
+
+@keyframes birthstoneSlide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slidder2 img:hover {
+    transform: scaleY(1.1);
+    transition: transform 1s linear;
+}
+
+.slidderBtn {
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+/* jewelery style section */
+.jewelery-style-section {
+    background-color: rgb(215, 215, 208);
+    padding: 40px 20px;
+}
+
+.heading p {
+    font-size: 18px;
+    padding: 10px 20px 0 20px;
+}
+
+.jewelery-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.jewelery-card-img {
+    width: 24%;
+}
+
+.jewelery-card-img a {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.jewelery-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.jewelery-card-img:hover img {
+    transform: scale(1.2);
+}
+
+.jewelery-card-img p {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.banner img {
+    width: 100%;
+    height: 90vh;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* beauty section */
+.beauty-container {
+    position: relative;
+    padding: 0 10px;
+}
+
+.beauti-img {
+    width: 100%;
+    display: flex;
+    height: 60vh;
+    gap: 20px;
+    justify-content: center;
+}
+
+.beauti-img a {
+    width: 15%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.beauti-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.beauti-img img:hover {
+    filter: brightness(105%);
+    transition: brightness .5s linear;
+}
+
+.beauti-btn {
+    position: absolute;
+    top: 55%;
+}
+
+.story {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    background-color: rgb(215, 215, 208);
+    padding: 50px 0;
+}
+
+.story-menu {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story-list {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    background: #9A9A97;
+    border-radius: 25px;
+    padding: 14px 20px;
+    color: white;
+    margin: 70px 0;
+}
+
+.story-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+}
+
+.story-img img {
+    width: 100%;
+}
+
+.story-btn {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    padding: 25px 22px;
+    border-radius: 50%;
+    background: #C4C4BE;
+    top: 42%;
+    right: 15%;
+    font-size: 28px;
+    color: white;
+    margin-left: 40px;
+}
+
+.story-btn:hover {
+    background: #b0b1b3;
+}
+
+.story-thumbnail {
+    width: 49%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 50px 0;
+    box-sizing: border-box;
+}
+
+.story-span {
+    display: flex;
+}
+
+.story-span img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.story-span:hover {
+    transform: scale(1.3);
+    transition: .3s linear;
+}
+
+/* choose section */
+.choose-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.choose-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 300px;
+    padding: 15px 20px;
+    width: 23.5%;
+    border: 1px solid #ccaa6b;
+    border-radius: 10px;
+}
+
+.choose-card img {
+    border: 1px solid #ccaa6b;
+    border-radius: 50%;
+    padding: 10px;
+    width: 70px;
+    object-fit: contain;
+}
+
+.choose-card h2 {
+    font-family: "Cormorant Infant", serif;
+}
+
+.choose-card p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #5d5d5a;
+    line-height: 1.5;
+}
+
+.choose-card:hover {
+    transform: translateY(-10px);
+    transition: .3s ease-in;
+}
+
+/* footer section */
+footer {
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(215, 215, 208);
+}
+
+.f-container {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.f-logo {
+    width: 24%;
+    padding: 10px 20px;
+}
+
+.f-div {
+    width: 24%;
+    padding: 10px 40px;
+}
+
+.f-div h2 {
+    font-family: "Cormorant Infant", serif;
+    font-weight: 500;
+}
+
+.f-logo a img {
+    width: 95%;
+}
+
+.f-logo p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 550;
+    font-family: "Cormorant Infant", serif;
+}
+
+.f-div ul {
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.f-div ul li {
+    padding: 8px 0;
+}
+
+.f-div ul li a {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+}
+
+.f-border {
+    border-left: 1px solid #b0b1b3;
+}
+
+.copyright span {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px 0 20px;
+    margin-top: 40px;
+    border-top: 1px solid #b0b1b3;
+
+}
+
+.copyright span a,
+.copyright p {
+    font-family: sans-serif;
+    font-weight: 500;
+}
